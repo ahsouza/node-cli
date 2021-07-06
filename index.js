@@ -19,19 +19,21 @@ const saveJson = (path, data) => fs.writeFileSync(path, JSON.stringify(data, nul
 
 setup.version(package.version);
 
-setup
-  .command('start [angular]')
-  .description('Start new project using Angular.js')
+  setup
+  .command('start [project]')
+  .description('Start new project with tecnologies JS')
   .action(async (project) => {
     let answers;
     if (!project) {
       answers = await inquirer.prompt([
         {
-          type: 'input',
+          type: 'checkbox',
           name: 'project',
-          message: 'Qual é o seu to-do?'
+          message: 'Create project with which technology?',
+          choices: ['Angular.js +8', 'Vue.js 2+', 'React.js']
         }
       ]);
+
     }
     const data = getJson(projectsPath);
     data.push({
@@ -41,48 +43,5 @@ setup
     saveJson(projectsPath, data);
   });
 
-  setup
-  .command('start [react]')
-  .description('Start new project using React.js')
-  .action(async (project) => {
-    let answers;
-    if (!project) {
-      answers = await inquirer.prompt([
-        {
-          type: 'input',
-          name: 'project',
-          message: 'Qual é o seu to-do?'
-        }
-      ]);
-    }
-    const data = getJson(projectsPath);
-    data.push({
-      title: project || answers.project,
-      done: false
-    });
-    saveJson(projectsPath, data);
-  });
-
-  setup
-  .command('start [vue]')
-  .description('Start new project using Vue.js')
-  .action(async (project) => {
-    let answers;
-    if (!project) {
-      answers = await inquirer.prompt([
-        {
-          type: 'input',
-          name: 'project',
-          message: 'Qual é o seu to-do?'
-        }
-      ]);
-    }
-    const data = getJson(projectsPath);
-    data.push({
-      title: project || answers.project,
-      done: false
-    });
-    saveJson(projectsPath, data);
-  });
 
 setup.parse(process.argv);
