@@ -8,7 +8,7 @@
   },
   "bin": {
     "app": "./index.js",
-    "db": "databases/index.js"
+    "db": "./databases/index.js"
   },
   "files": [
     "bin",

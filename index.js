@@ -132,7 +132,7 @@ setup.version(package.version);
     }
 
     if (answers.database === 'MySQL') {
-      exec('node databases/index.js databases')
+      exec('db')
 
     }
 
