@@ -1,0 +1,31 @@
+{
+  "name": "node-cli",
+  "version": "1.0.0",
+  "description": "Example build CLI using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "angular": "./todo/angular/index.js",
+    "vue": "./todo/vue/index.js",
+    "react": "./todo/vue/index.js",
+    "node-ts": "./todo/node-ts/index.js",
+    "node-js": "./todo/node-js/index.js",
+    "laravel": "./todo/laravel/index.js",
+    "flask": "./todo/flask/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "cli-table": "^0.3.6",
+    "commander": "^8.0.0",
+    "figlet": "^1.5.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^8.1.1",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.4"
+  }
+}
