@@ -20,12 +20,18 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.1",
+    "child_process": "^1.0.2",
     "cli-table": "^0.3.6",
     "commander": "^8.0.0",
+    "create-react-app": "^4.0.3",
     "figlet": "^1.5.0",
     "fs": "0.0.1-security",
     "inquirer": "^8.1.1",
     "path": "^0.12.7",
     "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "^12.1.1",
+    "@vue/cli": "^4.5.13"
   }
 }
