@@ -7,14 +7,14 @@
     "start": "node index.js"
   },
   "bin": {
-    "angular": "./todo/angular/index.js",
-    "vue": "./todo/vue/index.js",
-    "react": "./todo/vue/index.js",
-    "node-ts": "./todo/node-ts/index.js",
-    "node-js": "./todo/node-js/index.js",
-    "laravel": "./todo/laravel/index.js",
-    "flask": "./todo/flask/index.js"
+    "app": "./index.js",
+    "db": "databases/index.js"
   },
+  "files": [
+    "bin",
+    "lib",
+    "docs"
+  ],
   "keywords": [],
   "author": "@ahsouza Aníbal Henrique De Souza <annibalhsouza@gmail.com>",
   "license": "ISC",

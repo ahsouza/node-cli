@@ -130,6 +130,17 @@ setup.version(package.version);
         }
       ])
     }
+
+    if (answers.database === 'MySQL') {
+      exec('node databases/index.js databases')
+
+    }
+
+
+
+    
+    
+    
     const data = getJson(projectsPath);
     data.push({
       database: database || answers.database,
@@ -137,6 +148,8 @@ setup.version(package.version);
     });
     saveJson(projectsPath, data);
     console.log(`${chalk.green(`Create project in ${answers.database} with success!`)}`)
+
+
   })
 
 setup.parse(process.argv);
